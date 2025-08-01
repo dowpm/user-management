@@ -9,7 +9,10 @@ function getUserById(id) {
 }
 
 function createUser(data) {
-  const newUser = { id: Date.now(), ...data };
+  const newUser = { id: users.length + 1, ...data };
+  if (users.some((user) => user.email === data.email)) {
+    return null;
+  }
   users.push(newUser);
   return newUser;
 }

@@ -23,6 +23,13 @@ const getUser = (request, h) => {
 
 const createUser = (request, h) => {
   const newUser = userService.createUser(request.payload);
+  if (!newUser)
+    return h
+      .response({
+        error: 'Email already exists',
+        message: 'This email already exists',
+      })
+      .code(400);
   return h.response(newUser).code(201);
 };
 

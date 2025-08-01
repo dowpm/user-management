@@ -1,0 +1,14 @@
+{
+  "name": "user-management-with-hapi",
+  "version": "1.0.0",
+  "description": "a simple user management project build with Hapi.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mcdowpm",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^21.4.0"
+  }
+}

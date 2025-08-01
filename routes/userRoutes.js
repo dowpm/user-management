@@ -7,6 +7,10 @@ module.exports = [
     method: 'GET',
     path: '/users',
     handler: handler.getUsers,
+    options: {
+      tags: ['api'],
+      description: 'Get all users',
+    },
   },
   {
     method: 'GET',

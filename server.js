@@ -1,6 +1,10 @@
 'use strict';
 
 const Hapi = require('@hapi/hapi');
+const Inert = require('@hapi/inert');
+const Vision = require('@hapi/vision');
+const HapiSwagger = require('hapi-swagger');
+const Package = require('./package.json');
 
 const userRoutes = require('./routes/userRoutes');
 
@@ -9,6 +13,25 @@ const init = async () => {
     port: 3000,
     host: 'localhost',
   });
+
+  const swaggerOptions = {
+    info: {
+      title: 'User Management API',
+      version: Package.version,
+      description: 'API for managing users',
+    },
+    tags: [{ name: 'users', description: 'Operation on users' }],
+    documentationPath: '/docs',
+  };
+
+  await server.register([
+    Inert,
+    Vision,
+    {
+      plugin: HapiSwagger,
+      options: swaggerOptions,
+    },
+  ]);
 
   server.route(userRoutes);
 

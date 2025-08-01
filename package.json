@@ -9,6 +9,7 @@
   "author": "mcdowpm",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^21.4.0"
+    "@hapi/hapi": "^21.4.0",
+    "joi": "^17.13.3"
   }
 }

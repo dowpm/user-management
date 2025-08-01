@@ -3,7 +3,6 @@ const userService = require('../services/userService');
 const userNotFound = (id, h) => {
   return h
     .response({
-      statusCode: '404',
       error: 'User not found',
       message: `The user with the ID ${id} does not exist.`,
     })

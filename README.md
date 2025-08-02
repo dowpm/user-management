@@ -9,8 +9,8 @@ This is a minimal API to manage users, built with [Hapi.js](https://hapi.dev) an
 1. **Clone the repo or download the files:**
 
    ```bash
-   git clone <repo-url>
-   cd <repo-folder>
+   git clone [<repo-url>](https://github.com/dowpm/user-management)
+   cd [<repo-folder>](https://github.com/dowpm/user-management)
    ```
 
 2. **Install all dependencies:**
